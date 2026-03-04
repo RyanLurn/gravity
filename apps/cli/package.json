@@ -11,6 +11,7 @@
     "check": "bun run check-types && bun run lint"
   },
   "dependencies": {
+    "package-manager-detector": "^1.6.0",
     "zod": "catalog:"
   },
   "devDependencies": {
