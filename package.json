@@ -27,7 +27,8 @@
     "format:check": "bunx prettier . --check",
     "check": "bun run check-types && bun run lint && bun run format:check",
     "sync-hooks": "bunx lefthook install",
-    "types:build": "bun --elide-lines 0 --filter @gravity/types build"
+    "types:build": "bun --elide-lines 0 --filter @gravity/types build",
+    "error:build": "bun --elide-lines 0 --filter @gravity/error build"
   },
   "devDependencies": {
     "lefthook": "^2.1.1",
