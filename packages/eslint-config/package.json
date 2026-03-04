@@ -9,9 +9,7 @@
     "check": "bun run check-types && bun run lint"
   },
   "exports": {
-    "./bun": "./src/bun.js",
-    "./browser": "./src/browser.js",
-    "./isomorphic": "./src/isomorphic.js"
+    "./bun": "./src/config/bun.js"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
