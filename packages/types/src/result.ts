@@ -1,3 +1,8 @@
-export type Result<TData, TError> = Failure<TError> | Success<TData>;
-export type Failure<TError> = { success: false; error: TError };
-export type Success<TData> = { success: true; data: TData };
+export type Result<TData, TError extends Error = Error> =
+  | Failure<TError>
+  | Success<TData>;
+export type Failure<TError extends Error = Error> = {
+  success: false;
+  error: TError;
+};
+export type Success<TData = unknown> = { success: true; data: TData };
