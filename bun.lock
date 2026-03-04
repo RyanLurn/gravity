@@ -40,6 +40,16 @@
         "typescript-eslint": "^8.56.1",
       },
     },
+    "packages/types": {
+      "name": "@gravity/types",
+      "devDependencies": {
+        "@gravity/eslint-config": "workspace:*",
+        "@gravity/typescript-config": "workspace:*",
+        "@types/bun": "catalog:types",
+        "eslint": "catalog:",
+        "typescript": "catalog:",
+      },
+    },
     "packages/typescript-config": {
       "name": "@gravity/typescript-config",
     },
@@ -109,6 +119,8 @@
     "@gravity/cli": ["@gravity/cli@workspace:apps/cli"],
 
     "@gravity/eslint-config": ["@gravity/eslint-config@workspace:packages/eslint-config"],
+
+    "@gravity/types": ["@gravity/types@workspace:packages/types"],
 
     "@gravity/typescript-config": ["@gravity/typescript-config@workspace:packages/typescript-config"],
 
