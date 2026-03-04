@@ -1,0 +1,34 @@
+{
+  "files.eol": "\n",
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true,
+    "bun.lock": true
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true,
+    "bun.lock": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true,
+    "bun.lock": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.classFunctions": [
+    "tw",
+    "clsx",
+    "tw\\.[a-z-]+",
+    "cn",
+    "twMerge",
+    "cva"
+  ]
+}
