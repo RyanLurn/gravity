@@ -1,0 +1,5 @@
+{
+  "name": "@gravity/typescript-config",
+  "type": "module",
+  "private": true
+}
