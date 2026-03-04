@@ -1,0 +1,29 @@
+{
+  "name": "@gravity/eslint-config",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check-types": "bunx tsc --noEmit",
+    "lint": "bunx eslint --cache",
+    "lint:fix": "bunx eslint --cache --fix",
+    "check": "bun run check-types && bun run lint"
+  },
+  "exports": {
+    "./bun": "./src/bun.js",
+    "./browser": "./src/browser.js",
+    "./isomorphic": "./src/isomorphic.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@gravity/typescript-config": "workspace:*",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-perfectionist": "^5.6.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^17.3.0",
+    "typescript": "catalog:",
+    "typescript-eslint": "^8.56.1"
+  }
+}
