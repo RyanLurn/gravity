@@ -1,6 +1,6 @@
 import { serializeError } from "serialize-error";
 
-import type { BaseError } from "@/classes/base";
+import type { CustomError } from "@/classes/custom";
 
 export function serializeUnknownError(error: unknown): {
   value: unknown;
@@ -35,7 +35,7 @@ export function serializeUnknownError(error: unknown): {
   }
 }
 
-export function serializeBaseError(error: BaseError) {
+export function serializeCustomError(error: CustomError) {
   const cause = error.cause;
   const serializedCause =
     cause instanceof Error

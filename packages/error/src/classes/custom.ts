@@ -1,4 +1,4 @@
-export class BaseError extends Error {
+export class CustomError extends Error {
   context?: Record<string, unknown>;
   retryable: boolean;
   expected: boolean;

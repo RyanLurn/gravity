@@ -1,6 +1,6 @@
-import { BaseError } from "@/classes/base";
+import { CustomError } from "@/classes/custom";
 
-export class UnexpectedError extends BaseError {
+export class UnexpectedError extends CustomError {
   declare code: "UNEXPECTED_ERROR";
   declare retryable: false;
   declare expected: false;
