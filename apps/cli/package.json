@@ -11,10 +11,12 @@
     "check": "bun run check-types && bun run lint"
   },
   "dependencies": {
+    "@gravity/error": "workspace:*",
     "package-manager-detector": "^1.6.0",
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@gravity/types": "workspace:*",
     "@gravity/eslint-config": "workspace:*",
     "@gravity/typescript-config": "workspace:*",
     "@types/bun": "catalog:types",

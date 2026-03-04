@@ -13,11 +13,13 @@
     "apps/cli": {
       "name": "@gravity/cli",
       "dependencies": {
+        "@gravity/error": "workspace:*",
         "package-manager-detector": "^1.6.0",
         "zod": "catalog:",
       },
       "devDependencies": {
         "@gravity/eslint-config": "workspace:*",
+        "@gravity/types": "workspace:*",
         "@gravity/typescript-config": "workspace:*",
         "@types/bun": "catalog:types",
         "eslint": "catalog:",

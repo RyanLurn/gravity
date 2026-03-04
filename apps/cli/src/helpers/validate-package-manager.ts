@@ -1,16 +1,38 @@
+import type { Failure, Success, Result } from "@gravity/types";
+
 import { detect } from "package-manager-detector/detect";
 
-export async function validatePackageManager() {
+import {
+  UnsupportedPackageManagerError,
+  PackageManagerDetectionError,
+} from "@/errors";
+
+export async function validatePackageManager(): Promise<
+  Result<"bun", UnsupportedPackageManagerError | PackageManagerDetectionError>
+> {
   const detectResult = await detect();
   if (!detectResult) {
-    console.error("Couldn't detect your package manager.");
-    process.exit(1);
+    const failure: Failure<PackageManagerDetectionError> = {
+      error: new PackageManagerDetectionError(),
+      success: false,
+    };
+
+    return failure;
   }
 
   if (detectResult.name !== "bun") {
-    console.error("Gravity CLI only supports Bun as the package manager.");
-    process.exit(1);
+    const failure: Failure<UnsupportedPackageManagerError> = {
+      error: new UnsupportedPackageManagerError(),
+      success: false,
+    };
+
+    return failure;
   }
 
-  return detectResult.name;
+  const success: Success<"bun"> = {
+    success: true,
+    data: "bun",
+  };
+
+  return success;
 }
